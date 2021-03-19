@@ -13,9 +13,9 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
-
+import re
 import nltk
-
+from urllib.parse import urlparse
 app = Flask(__name__)
 Pkl_Filename = open('models/spam_detect.pkl','rb')  
 Pickled_LR_Model = pickle.load(Pkl_Filename)
